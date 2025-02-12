@@ -21,20 +21,27 @@ namespace Lesson_4
     {
         static void Main(string[] args)
         {
+            #region
+            #endregion
+
+
+            #region Инициализация
             //int[] array = new int[10];
             //int[] array; // объявление
             //array = new int[10]; // инициализация
             //int[] array = new int[5] { 1, 2, 3, 4, 5 };
             //int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7 ,8 };
-            int[] array = { -1, 23, 10, 0, -4, 5, 9 };
+            #endregion
+            #region Вывод массива
+            //int[] array = { -1, 23, 10, 0, -4, 5, 9 };
 
-            for(int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array[i] + " ");
-            }
-            Console.WriteLine();
+            //for(int i = 0; i < array.Length; i++)
+            //{
+            //    Console.Write(array[i] + " ");
+            //}
+            //Console.WriteLine();
+            #endregion
 
-            
 
 
         }

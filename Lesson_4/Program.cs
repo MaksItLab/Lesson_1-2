@@ -43,11 +43,21 @@ namespace Lesson_4
             #endregion
 
             #region Ввод с клавиатуры
+            //int[] array = new int[10];
+            //array = FillArray(array);
+            //PrintArray(array);
+            #endregion
+
+            #region Вывод в обратном порядке
             int[] array = new int[10];
             array = FillArray(array);
-            PrintArray(array);
 
 
+            for (int i = array.Length - 1; i >= 0;i--)
+            {
+                Console.Write(array[i] + " ");
+            }
+            
             #endregion
 
         }

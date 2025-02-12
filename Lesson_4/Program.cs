@@ -42,8 +42,32 @@ namespace Lesson_4
             //Console.WriteLine();
             #endregion
 
+            #region Ввод с клавиатуры
+            int[] array = new int[10];
+            array = FillArray(array);
+            PrintArray(array);
 
 
+            #endregion
+
+        }
+
+        public static int[] FillArray(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            return array;
+        }
+
+        public static void PrintArray(int[] array)
+        {
+            for(int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+            Console.WriteLine();
         }
     }
 

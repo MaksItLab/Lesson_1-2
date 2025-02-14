@@ -77,7 +77,32 @@ namespace Lesson_4
             //Console.WriteLine($"Индекс числа {12} = {index}");
             #endregion
 
+            #region Двумерные массивы
 
+            int[,] array = new int[,] {
+                                            { 1, 2, 3, 4, 5 },
+                                            { 1, 2, 3, 4, 5 },
+                                            { 1, 2, 3, 4, 5 }
+                                         };
+
+            int[,] array2 = { 
+                                { 1, 2, 3, 0 }, 
+                                { 1, 2, 4, -4 },
+                                { 1, 2, 4, -4 },
+                                { 1, 2, 4, -4 },
+                                { 1, 2, 4, -4 }
+                            };
+
+            for (int i = 0; i < array2.GetLength(0); i++) // перебирать массивы
+            {
+                for (int j = 0; j < array2.GetLength(1); j++) // перебирает элементы массива
+                {
+                    Console.Write(array2[i,j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+            #endregion
         }
 
         public static int IndexOfElement(int[] array, int number)
@@ -86,7 +111,7 @@ namespace Lesson_4
 
             for (int i = 0; i < array.Length; i++)
             {
-                continue;
+                
                 if (array[i] == number)
                 {
                     index = i;

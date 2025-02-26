@@ -53,20 +53,80 @@ namespace Lesson_6
             //Print(list);
             #endregion
 
-            Dictionary<int, string> priority = new Dictionary<int, string>();
-            priority.Add(0,"Низкий");
-            priority.Add(1,"Между низким и средним");
-            priority.Add(2,"Средний");
-            priority.Add(3,"Между средним и высоким");
-            priority.Add(4,"Высокий");
+            //Dictionary<int, string> priority = new Dictionary<int, string>();
+            //priority.Add(0,"Низкий");
+            //priority.Add(1,"Между низким и средним");
+            //priority.Add(2,"Средний");
+            //priority.Add(3,"Между средним и высоким");
+            //priority.Add(4,"Высокий");
 
-            //priority.TryGetValue(3, out string result);
+            ////priority.TryGetValue(3, out string result);
 
-            //Console.WriteLine("Приоритет задачи: " + result);
+            ////Console.WriteLine("Приоритет задачи: " + result);
 
-            foreach (var item in priority.Keys)
+            //foreach (var item in priority.Keys)
+            //{
+            //    Console.WriteLine(priority[item]);
+            //}
+
+
+            Dictionary<string, string> words = new Dictionary<string, string>();
+            bool isExit = false;
+
+            words.Add("Car", "Машина");
+            words.Add("Cat", "Кот");
+            words.Add("Hourse", "Лошадь");
+
+            while (!isExit)
             {
-                Console.WriteLine(priority[item]);
+                Console.WriteLine("Выберите действие: \n" +
+                                  "1. Посмотреть перевод \n" +
+                                  "2. Добавить слова \n" +
+                                  "3. Выйти");
+
+                int action = int.Parse(Console.ReadLine());
+
+                switch (action)
+                {
+                    case 1:
+                        Console.WriteLine("Введите слово: ");
+                        string word = Console.ReadLine();
+                        if (words.ContainsKey(word))
+                        {
+                            Console.WriteLine(words[word]);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Такое слово отсутствует!");
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("Введите слово на английском: ");
+                        string wordEnglish = Console.ReadLine();
+                        Console.WriteLine("Введите перевод слова на русском: ");
+                        string wordRussian = Console.ReadLine();
+
+                        if (words.ContainsKey(wordEnglish)) 
+                        {
+                            Console.WriteLine("Ошибка! Такие слова уже добавлены!");
+                        }
+                        else
+                        {
+                            words.Add(wordEnglish, wordRussian);
+                        }
+
+                        
+                        break;
+
+                    case 3:
+                        isExit = true;
+                        break;
+
+                    default:
+                        Console.WriteLine("Такого пункта меню не существует");
+                        break;
+                }
+
             }
 
         }
